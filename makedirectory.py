@@ -15,7 +15,7 @@ for dirpath, dirs, files in os.walk(sourceDir):
                 # Check if the folder already exists
                 if (not os.path.exists(newFolder)):
                     # Print the new folder name and create it
-                    print newFolder
+                    print (newFolder)
                     os.mkdir(newFolder)
                 # Create the new path for the file
                 newName = os.path.join(newFolder, filenm)
@@ -24,5 +24,5 @@ for dirpath, dirs, files in os.walk(sourceDir):
                 # Check if the file already exists in the new folder
                 if (not os.path.exists(newName)):
                     # Print the renaming action and move the file
-                    print "Renaming to" , newName
+                    print ("Renaming to" , newName)
                     os.rename(oldName, newName)
